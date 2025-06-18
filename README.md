@@ -1,8 +1,3 @@
-Understood! Let's craft a comprehensive `README.md` file that effectively describes your Brainwonders Parent Assistant project, highlights its key features, and implicitly addresses typical assessment requirements for a RAG-based AI application. I'll include placeholders for your Render deployment URL.
-
----
-
-```markdown
 # 🧠 Brainwonders Parent Assistant
 
 ## Empowering Parents with Instant Answers on Brainwonders Programs
@@ -16,8 +11,6 @@ This repository hosts the code for an intelligent AI-powered assistant designed 
 Experience the Brainwonders Parent Assistant live on Render:
 
 [**Brainwonders Parent Assistant - Live Demo**](YOUR_RENDER_APP_URL_HERE)
-
-*(Please replace `YOUR_RENDER_APP_URL_HERE` with the actual URL after deploying to Render.)*
 
 ---
 
