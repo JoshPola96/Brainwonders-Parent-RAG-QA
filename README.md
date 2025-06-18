@@ -12,8 +12,6 @@ Experience the Brainwonders Parent Assistant live on Render:
 
 [**Brainwonders Parent Assistant - Live Demo**](YOUR_RENDER_APP_URL_HERE)
 
----
-
 ## ✨ Features
 
 * **Intelligent Q&A:** Answers parent queries about Brainwonders' programs, pricing, methodologies (like DMIT), and services.
