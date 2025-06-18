@@ -10,7 +10,7 @@ This repository hosts the code for an intelligent AI-powered assistant designed 
 
 Experience the Brainwonders Parent Assistant live on Render:
 
-[**Brainwonders Parent Assistant - Live Demo**](YOUR_RENDER_APP_URL_HERE)
+[**Brainwonders Parent Assistant - Live Demo**](https://brainwonders-parent-rag-qa.onrender.com)
 
 ## ✨ Features
 
