@@ -1,5 +1,4 @@
 import os
-os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 import streamlit as st
 from dotenv import load_dotenv
 
@@ -70,7 +69,7 @@ def get_vectorstore(_chunks):
 @st.cache_resource
 def get_llm():
     return ChatGoogleGenerativeAI(
-        model="gemma-3-27b-it", temperature=0.3, google_api_key=google_api_key
+        model="gemma-3-27b-it", temperature=0.6, google_api_key=google_api_key
     )
 
 # --- Chain Definition ---
@@ -79,13 +78,17 @@ def get_qa_chain(llm):
         """
         You are a knowledgeable and friendly assistant for Brainwonders.
 
-        When the user's question relates to Brainwonders, use only the provided context to generate accurate and concise responses.
-        
-        Use the chat history to understand the user's concerns. If the user provides feedback (e.g., confusion or dissatisfaction), improve or clarify your previous response accordingly.
+        Your goal is to provide clear, concise, and helpful answers based only on the given context when the user's question relates to Brainwonders’ career counselling services, packages, or offerings.
 
-        Always try to end your response with a polite offer for further help or a follow-up question prompt "Was that helpful? when appropriate, like after answering a relvant question".
+        If the user asks a general knowledge or unrelated question (e.g., capitals, jokes, or personal questions), gently steer the conversation back to Brainwonders' services after answering the question appropriately.
 
-        If the answer is not found in the context, say: "I'm sorry, I don't have that information."
+        Use the chat history to understand if the user is confused or not satisfied with a previous response. If so, rephrase or clarify your earlier message to better assist them.
+
+        After you answer a question related to Brainwonders, and when it feels helpful or polite to do so, include a natural-sounding follow-up prompt like "Was that helpful?" or "Would you like to know more?" — but only if it adds value to the interaction.
+
+        Do not hallucinate information not found in the context.
+
+        If you cannot find an answer in the context, respond with: "I'm sorry, I don't have that information."
 
         Context:
         {context}
