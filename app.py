@@ -57,7 +57,7 @@ def load_and_split_documents():
         st.warning("No documents found in the 'data' directory. Please add some files (e.g., .md, .txt, .pdf).")
         st.stop()
 
-    splitter = RecursiveCharacterTextSplitter(chunk_size=300, chunk_overlap=50)
+    splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=200)
     return splitter.split_documents(all_documents)
 
 @st.cache_resource
